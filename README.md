@@ -21,10 +21,6 @@ terraform-aws-iam-users/
 
 **main.tf**
 ```hcl
-provider "aws" {
-  region = var.aws_region
-}
-
 module "terraform_service_account" {
   source              = ""
   user_name           = "terraform-service-account"
@@ -105,11 +101,5 @@ variable "tags" {
   description = "A map of tags to assign to the role."
   type        = map(string)
   default     = {}
-}
-
-variable "aws_region" {
-  description = "The AWS region where resources will be created."
-  type        = string
-  default     = ""
 }
 ```
