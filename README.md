@@ -49,10 +49,9 @@ output "policy_id" {
 **terraform.tfvars**
 ```hcl
 user_name           = "<user_name>"
-user_path           = "/service-accounts/"
+user_path           = "/"
 policies            = ["<aws_policy_arn_necessary>"]
 deny_console_access = true/false
-aws_region = <region>
 ```
 **variables.tf**
 ```hcl
